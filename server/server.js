@@ -12,10 +12,10 @@ app.use(parser.json());
 
 MongoClient.connect('mongodb://localhost:27017')
 .then((client) => {
-    const db = client.db('testCardGame');
-    const listsCollection = db.collection('cards');
+    const db = client.db('#####');
+    const listsCollection = db.collection('#####');
     const listsRouter = createRouter(listsCollection);
-    app.use('/api/magiccards', listsRouter);
+    app.use('######', listsRouter);
   })
   .catch(console.err);
 
