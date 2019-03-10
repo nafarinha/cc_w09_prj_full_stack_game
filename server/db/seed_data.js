@@ -1,20 +1,20 @@
-use testCardGame;
+use magic_trick;
 db.dropDatabase();
 
-db.cards.insertMany([
+db.cardset.insertMany([
   {
-    name: "1",
     card: [1, 2, 3, 4, 5],
     containsNumber: false,
+    displayOrder: 1
   },
   {
-    name: "2",
-    card: [2, 3, 4, 5, 6],
+    card: [1, 2, 3, 4, 5],
+    containsNumber: false,
+    displayOrder: 3
+  },
+  {
+    card: [1, 2, 3, 4, 5],
     containsNumber: true,
-  },
-  {
-    name: "4",
-    card: [3, 4, 5, 6, 7],
-    contains: false,
+    displayOrder: 2
   },
 ]);
