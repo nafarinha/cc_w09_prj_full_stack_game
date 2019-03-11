@@ -52,59 +52,35 @@ describe('Deck', function() {
 ]
 });
 
-// it('should have a card', function() {
-//
-// });
-//
-// it('should check if card contains a number', function() {
-//
-// });
-//
-// xit('should be able to display order', function() {
-//
-// });
+xit('should be able to update highest number', function() {
+//updateHighestNumber
+});
 
-xit('should generate random display order of cards', function() {
+xit('should be able to update the total number of cards', function() {
+  //updateNumberOfCards
 
 });
 
-xit('should calculate number of cards based on highest number', function() {
+xit('should be able to check the changed highest number attributes', function() {
+//checkChangedAttribute
 
 });
 
-xit('should calculate highest number based on number of cards', function() {
-
+xit('should be able to get number of cards', function() {
+//getNumberOfCards
 });
 
-xit('should calculate the sum result', function() {
-
+xit('should be able to get the highest number to guess', function() {
+//getHighestNumber
 });
 
-xit('should turn number into binary', function() {
+xit('should be able to generate cards', function() {
+  //generateCards;
+})
 
+xit('should be able to calculate the guessed number', function() {
+  //getGuessedNumber
 });
-
-// it('should be able to check if number is a binary', function() {
-//
-// });
-
-xit('should reverse binary number', function() {
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
