@@ -3,13 +3,16 @@ const PubSub = require('../helpers/pub_sub.js');
 
 
 const Card = function (iteration, totalNumberOfCards) {
-  this.card = [];
+  this.cardNumbers = [];
+  this.containsNumber = false;
   this.iteration = iteration;
   this.totalNumberOfCards = totalNumberOfCards;
   this.lowestNumber = null;
   this.highestNumber = null;
 
 };
+
+
 
 
 //createCard
@@ -47,6 +50,16 @@ const Card = function (iteration, totalNumberOfCards) {
 // assign a varible (index) to counter ++
 // conditional if statement with an AND operator .
   // if bit in reverseBinaryVariable equals '1' AND index equals this.iteration
-  // if true push number into the card array (this.card)
+  // if true push number into the number array (this.cardNumbers)
+
+//prettyCard
+//this fn will return an object with card numbers and a key/value pair (containsNumber) to know if the guessed number is or isn't included in the card numbers array
+
+// prettyCard = {this.cardNumbers, this.containsNumber};
+// return prettyCard;
+
+//updateContainsNumber()
+//this fn is called when the guess number is inluded in the card numbers.
+//The fn updates this.containsNumber to true.
 
 module.exports = Card

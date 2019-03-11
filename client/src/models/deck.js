@@ -39,13 +39,9 @@ const Deck = function () {
 //generateCards
 //using this.numberOfCards
 // loop up to this.numberOfCards
-// for each iteration create a Card object(iteration, this.numberOfCards) and push it into this.cards.
-//randomiseCards
+// for each iteration create a Card object(iteration, this.numberOfCards) and push it into this.cards
 // ***this will be called from App.js
 
-
-//randomiseCards
-// use this.cards and randomise the position in the cards array.
 
 //getGuessedNumber
 // use this.cards - loop through each card
