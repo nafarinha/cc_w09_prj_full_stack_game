@@ -20,11 +20,16 @@ document.addEventListener('DOMContentLoaded',()=>{
 //at the start of the game you get a input from user, you get a number.
 //you pass this number here.
 
+const form = document.querySelector('form#games-form');
+const formView = new FormView(form);
+formView.setupEventListeners();
 
-  const formView = new FormView;
-
-    document.addEventListener('click',(evt)=>{
-    
+  //this should be in FormView
+    // document.addEventListener('click',function(evt)=>{
+    //   this.element = formElement;
+    //
+    // }
+  //
     const deck = new Deck;
     //on addEventListener -- user wants highest number
 
