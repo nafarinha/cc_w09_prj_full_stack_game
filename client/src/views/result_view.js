@@ -5,10 +5,11 @@ const ResultView = function (result) {
 };
 
 // Gives the result that the computer calculated, the final number
+
 //
 // Subscribes
 // Channel Card:result-submitted
-// (Deck model publishes)
+// (Deck model publishes) fn getGuessedNumber
 
 
 // ResultView.prototype.bindEvents = function () {
