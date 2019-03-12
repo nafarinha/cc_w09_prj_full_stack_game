@@ -30,18 +30,18 @@ formView.setupEventListeners();
     //
     // }
   //
-    const deck = new Deck;
-    //on addEventListener -- user wants highest number
+    // const deck = new Deck;
+    // //on addEventListener -- user wants highest number
+    //
+    // deck.updateHighestNumber(userInput);
+    // deck.generateCards();
+    //
+    // //on addEventListener -- user wants number of cards
+    //
+    // deck.updateNumberOfCards(userInput);
+    // deck.generateCards();
 
-    deck.updateHighestNumber(userInput);
-    deck.generateCards();
 
-    //on addEventListener -- user wants number of cards
-
-    deck.updateNumberOfCards(userInput);
-    deck.generateCards();
-
-  };
 
 
 

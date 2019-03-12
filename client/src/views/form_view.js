@@ -1,9 +1,16 @@
 const PubSub = require('../helpers/pub_sub.js');
 const InfoView = require('./info_view.js');
 
-const FormView = function (form) {
-  this.form = form;
+const FormView = function (formElement) {
+  this.element = formElement;
 };
+
+FormView.prototype.setupEventListeners = function(){
+  this.element.addEventListener('submit',function(evt){
+    evt.preventDefault();
+    console.log(evt.target);
+  })
+}
 
 // The start site with Title - Information - option to play by number of cards
 // or the highest number.
