@@ -27,9 +27,13 @@ Deck.prototype.updateHighestNumber =function (number){
 //
 
 //getNumberOfCards
-  // Math.log2(this.highestNumber)
-  //  Math.ceil(result of log2)
-  // assing result of ceil to this.numberOfCards.
+
+Deck.prototype.calculateNumberOfCards = function(){
+  const base2 = Math.log2(this.highestNumber);
+  const numberOfCards = Math.ceil(base2);
+  this.numberOfCards = numberOfCards;
+};
+
 
 //getHighestNumber
  // 2 to the power of this.numberOfCards

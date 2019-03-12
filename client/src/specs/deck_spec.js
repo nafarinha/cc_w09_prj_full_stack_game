@@ -34,10 +34,12 @@ describe('Deck', function() {
 
   });
 
-  it('should be able to get number of cards', function() {
-  //getNumberOfCards
-  const actual = '';
-  const expected = 'y';
+  it('should be able to calculate number of cards', function() {
+  //calculateNumberOfCards
+  testDeck.highestNumber = 128
+  testDeck.calculateNumberOfCards();
+  const actual = testDeck.numberOfCards;
+  const expected = 7;
   assert.strictEqual(actual,expected);
   });
 
