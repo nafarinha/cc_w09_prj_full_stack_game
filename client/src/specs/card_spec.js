@@ -53,7 +53,15 @@ it('should be able to get number range lowest number', function() {
   //use function getNumberRange
   modelCard.getNumberRange();
   const actual = modelCard.lowestNumber;
-  const expected = 1;
+  const expected = 2;
+  assert.strictEqual(actual,expected);
+});
+
+it('should be able to get number range highest number', function() {
+  //use function getNumberRange
+  modelCard.getNumberRange();
+  const actual = modelCard.highestNumber;
+  const expected = 127;
   assert.strictEqual(actual,expected);
 });
 

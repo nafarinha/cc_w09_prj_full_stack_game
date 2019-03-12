@@ -24,10 +24,10 @@ const Card = function (iteration, totalNumberOfCards) {
 
 
 Card.prototype.getNumberRange = function(){
-  lowestNumber = this.iteration **2;
-  highestNumber = this.totalNumberOfCards **2;
+  lowestNumber = 2** this.iteration;
+  highestNumber = 2** this.totalNumberOfCards;
   this.lowestNumber = lowestNumber;
-  this.highestNumber = highestNumber;
+  this.highestNumber = highestNumber -1;
 };
 // using this.iteration (received from Deck as an iteration value)
 // using this.totalNumberOfCards (received from Deck as the total number of cards)
