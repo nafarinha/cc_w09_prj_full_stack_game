@@ -117,8 +117,10 @@ it('should be able to update the containsNumber attribute', function() {
   assert.ok(expected);
 });
 
-xit('it should have a iteration attribute', function() {
-
+it('it should have a iteration attribute', function() {
+  const actual = modelCard.iteration;
+  const expected = 1;
+  assert.deepStrictEqual(actual, expected);
 });
 
 xit('it should have total numbers of cards', function() {
