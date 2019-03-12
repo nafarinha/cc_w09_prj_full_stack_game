@@ -18,6 +18,8 @@ const FormView = function (form) {
 // Channel: FormView:number-submitted
 // (Deck model subscribes)
 
+//We need another PubSub for the PLAY BUTTOn
+
 //BUTTON
 // FormView.prototype.bindEvents = function() {
 //   this.form.addEventListener('submit', (evt) => {

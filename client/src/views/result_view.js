@@ -5,6 +5,8 @@ const ResultView = function (result) {
 };
 
 // Gives the result that the computer calculated, the final number
+//Dont show the answer right away - post an image or something that we Then
+//click and when its clicked we get the result.
 
 //
 // Subscribes

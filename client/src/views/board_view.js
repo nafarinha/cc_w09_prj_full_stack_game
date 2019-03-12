@@ -5,8 +5,6 @@ const BoardView = function () {
 };
 
 
-
-
 // Takes the answer from player 'yes' or 'no' and publishes to the model
 //Needs two BUTTONS
 
@@ -15,11 +13,7 @@ const BoardView = function () {
 // (Deck model subscribes)
 
 
-//CardView.prototype.bindEvents = function() {
-  //PubSub.publish('CardView:user-answer', (evt) => {
 
-//})
-//}
 
 // /BUTTON
 // / BoardView.prototype.bindEvents = function() {
