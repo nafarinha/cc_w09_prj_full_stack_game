@@ -10,6 +10,11 @@ const BoardView = function (card) {
 // Subscribes
 // (Deck Model publishes)
 
+//InfoView.prototype.bindEvents = function() {
+  //PubSub.subscribe('Cards:single-card-ready', (evt) => {
+
+//})
+//}
 
 
 module.exports = BoardView;
