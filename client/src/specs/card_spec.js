@@ -144,7 +144,11 @@ it('it should have a lowest number attribute', function() {
   assert.strictEqual(actual,expected);
 });
 
-xit('it should have a highest number attribute', function() {
+it('it should have a highest number attribute', function() {
+  modelCard.createCard();
+  const actual = modelCard.highestNumber;
+  const expected = 127;
+  assert.strictEqual(actual,expected);
 
 });
 
