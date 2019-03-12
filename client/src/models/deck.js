@@ -13,7 +13,7 @@ const Deck = function () {
 //**number will come from app.js
 Deck.prototype.updateHighestNumber =function (number){
   this.highestNumber = number;
-  // this.checkChangedAttribute();
+  this.checkChangedAttribute();
 };
 
 //updateNumberOfCards(number) **number will come from app.js
@@ -22,7 +22,7 @@ Deck.prototype.updateHighestNumber =function (number){
 
 Deck.prototype.updateNumberOfCards = function (number) {
   this.numberOfCards = number;
-  // this.checkChangedAttribute();
+  this.checkChangedAttribute();
 };
 
 // checkChangedAttribute
