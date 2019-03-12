@@ -12,4 +12,10 @@ const CardView = function (answer) {
 // (Deck model subscribes)
 
 
+//CardView.prototype.bindEvents = function() {
+  //PubSub.publish('CardView:user-answer', (evt) => {
+
+//})
+//}
+
 module.exports = CardView;

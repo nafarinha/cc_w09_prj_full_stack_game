@@ -10,6 +10,7 @@ const ResultView = function (result) {
 // Channel Card:result-submitted
 // (Deck model publishes)
 
+
 // ResultView.prototype.bindEvents = function () {
 //   PubSub.subscribe('Card:result-submitted', (event) => {
 //     const result = event.detail;

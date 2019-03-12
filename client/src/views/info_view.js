@@ -11,6 +11,10 @@ const InfoView = function (information) {
 // Channel: Cards:game-parameters-submitted
 // (Deck model publishes)
 
+//InfoView.prototype.bindEvents = function() {
+  //PubSub.subscribe('Cards:game-parameters-submitted', (evt) => {
+
+//}
 
 
 
