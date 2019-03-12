@@ -34,8 +34,11 @@ describe('Deck', function() {
 
   });
 
-  xit('should be able to get number of cards', function() {
+  it('should be able to get number of cards', function() {
   //getNumberOfCards
+  const actual = '';
+  const expected = 'y';
+  assert.strictEqual(actual,expected);
   });
 
   xit('should be able to get the highest number to guess', function() {
