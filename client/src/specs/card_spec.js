@@ -11,6 +11,8 @@ describe('Card', function() {
   beforeEach(function() {
     modelCard = new Card(1, 7);
 
+
+
     card1 = {
       card:[1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,35,37,39,41,43,45,46,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103,105,107,109,111,113,115,117,119,121,123,125,127],
       containsNumber: false
@@ -65,8 +67,12 @@ it('should be able to get number range highest number', function() {
   assert.strictEqual(actual,expected);
 });
 
-xit('should be able to create a card', function() {
+it('should be able to create a card', function() {
   // fn createCard
+  const actual = modelCard.createCard();
+  const expected = ''
+  assert.deepStrictEqual(actual,expected)
+
 });
 
 
