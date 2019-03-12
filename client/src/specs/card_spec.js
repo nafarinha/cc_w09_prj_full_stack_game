@@ -32,18 +32,21 @@ xit('should be able to populate number', function() {
   const number = 19
   const reverseBinaryNumber = "11001"
   //19 backwards in binary
-  modelCard.populateNumber(reverseBinaryNumber, number)
+  modelCard.populateNumber(reverseBinaryNumber, number);
   assert.strictEqual(modelCard.cardNumbers, 19);
 });
 
 it('should be able to reverse a string', function() {
   const actual = modelCard.reverseString('10011');
-  expected = '11001'
-  assert.strictEqual(actual, expected)
+  expected = '11001';
+  assert.strictEqual(actual, expected);
 });
 
-xit('should be able to turn number to binary', function() {
+it('should be able to turn number to binary', function() {
   // use function numberToBinary
+  const actual = modelCard.numberToBinary(19);
+  const expected = '10011'
+  assert.strictEqual(actual,expected);
 });
 
 xit('should be able to get number range', function() {

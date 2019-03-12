@@ -35,10 +35,10 @@ const Card = function (iteration, totalNumberOfCards) {
 
 
 
-//this will turn numbers to binary.
-// function numberToBinary(number){
-//     return (number).toString(2);
-// };
+// this will turn numbers to binary.
+Card.prototype.numberToBinary = function(number){
+    return (number).toString(2);
+};
 
 Card.prototype.reverseString = function(string) {
     return string.split("").reverse().join("");
