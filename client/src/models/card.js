@@ -13,8 +13,6 @@ const Card = function (iteration, totalNumberOfCards) {
 };
 
 
-
-
 //createCard
 //this will populate a card using the following logic:
 //getNumberRange()
@@ -25,7 +23,12 @@ const Card = function (iteration, totalNumberOfCards) {
     //populateNumber(reverseBinaryVariable,currentNumber)
 
 
-//getNumberRange()
+Card.prototype.getNumberRange = function(){
+  lowestNumber = this.iteration **2;
+  highestNumber = this.totalNumberOfCards **2;
+  this.lowestNumber = lowestNumber;
+  this.highestNumber = highestNumber;
+};
 // using this.iteration (received from Deck as an iteration value)
 // using this.totalNumberOfCards (received from Deck as the total number of cards)
 // calculate lowest number based on 2  to the power of this.iteration.
