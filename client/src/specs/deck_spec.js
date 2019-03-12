@@ -29,10 +29,14 @@ describe('Deck', function() {
 
   });
 
-  xit('should be able to check the changed highest number attributes', function() {
+  it('should be able to check if highest number attribute changed', function() {
   //checkChangedAttribute
+  
 
   });
+
+  it('should be able to check if number of cards attribute changed', function() {
+  //checkChangedAttribute
 
   xit('should be able to get number of cards', function() {
   //getNumberOfCards
