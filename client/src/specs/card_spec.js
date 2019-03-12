@@ -94,10 +94,13 @@ it('should return pretty card', function() {
   assert.deepEqual(actual, expected);
 });
 
-xit('should have number inside card', function() {
+it('should have number inside card', function() {
 
+  modelCard.cardNumbers.push(1);
+  const actual = modelCard.cardNumbers;
+  const expected = [1];
+  assert.deepStrictEqual(actual, expected);
 });
-
 
 
 //these tests can only be done after generate cards are successfull
