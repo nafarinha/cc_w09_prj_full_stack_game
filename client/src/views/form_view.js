@@ -7,20 +7,28 @@ const FormView = function (form) {
 
 // The start site with Title - Information - option to play by number of cards
 // or the highest number.
-//Press a BUTTON to choose to play by cards og press a BUTTON to play by
-//the highest number.
-//Input your number.
-//Then get the InfoView sent with information about highest number or number of cards
-//Then press PLAY
-
-//Publishes
-//Channel: FormView:number-submitted
+// Press a BUTTON to choose to play by cards or press a BUTTON to play by
+// the highest number.
+// Input your number.
+// Then get the InfoView sent with information about highest number or number of cards
+// Then press PLAY
+//
+// Publishes
+// Channel: FormView:number-submitted
+// (Deck model subscribes)
 
 
 // FormView.prototype.bindEvents = function() {
 //   this.form.addEventListener('submit', (evt) => {
 //
 //   })
+// }
+
+//FormView.prototype.render = function (game) {
+  // const gameForm = document.createElement('div');
+  // gameForm.id = 'game';
+
+
 // }
 
 // FormView.prototype.handleSubmit = function (evt) {

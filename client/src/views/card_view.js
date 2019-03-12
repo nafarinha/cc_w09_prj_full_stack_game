@@ -5,10 +5,11 @@ const CardView = function (answer) {
 };
 
 
-//Takes the answer from player 'yes' or 'no' and publishes to the model
-
-//Publishes
-//Channel CardView:user-answer
+// Takes the answer from player 'yes' or 'no' and publishes to the model
+//
+// Publishes
+// Channel CardView:user-answer
+// (Deck model subscribes)
 
 
 module.exports = CardView;
