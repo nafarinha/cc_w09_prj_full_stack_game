@@ -8,16 +8,18 @@
   </head>
   <body>
     <h1>Name of the game</h1>
-    <h3>Instructions</h3>
+
     <form id="games-form">
-
-        <label for="highestNumber">Choose the highest number to guess:</label>
-        <input type="number" id="highestNumber"/>
-
-        <label for="cardsNumber">Choose the number of cards to play with:</label>
-        <input type="number" id="cardsNumber"/>
-
-      <input type="submit" value="Play" id="play"/>
+      <button type="button" id="number-of-cards-btn">Play with Cards</button>
+      <button type="button" id="max-number-btn">Play using Numbers</button>
+      <br>
+      <label class="hidden" for="highestNumber">Choose the highest number to guess:</label>
+      <input type="number" id="highestNumber"/>
+      <label class="hidden"for="cardsNumber">Choose the number of cards to play with:</label>
+      <input type="number" id="cardsNumber"/>
+      <input type="submit" id="play-game" value="Play">
     </form>
+    <h3>Instructions:</h3>
+    <p>Instructions go here...</p>
   </body>
 </html>
