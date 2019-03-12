@@ -24,8 +24,12 @@ describe('Deck', function() {
     assert.strictEqual(actual,expected);
   });
 
-  xit('should be able to update the total number of cards', function() {
+  it('should be able to update the total number of cards', function() {
     //updateNumberOfCards
+    testDeck.updateNumberOfCards(100);
+    const actual = testDeck.numberOfCards;
+    const expected = 100;
+    assert.strictEqual(actual,expected);
 
   });
 
