@@ -109,8 +109,12 @@ xit('it should have card contain number attributes', function() {
 
 });
 
-xit('should be able to update the containsNumber attribute', function() {
-
+it('should be able to update the containsNumber attribute', function() {
+  //fn updateContainsNumber
+  modelCard.createCard();
+  modelCard.updateContainsNumber();
+  const expected = modelCard.containsNumber;
+  assert.ok(expected);
 });
 
 xit('it should have a iteration attribute', function() {
