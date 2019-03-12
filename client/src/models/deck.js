@@ -11,11 +11,11 @@ const Deck = function () {
 };
 
 //resposible for getting the highestNumber OR number of cards.
-
-//updateHighestNumber(number) **number will come from app.js
-// assign number to this.highestNumber
-//checkChangedAttribute()
-
+//**number will come from app.js
+Deck.prototype.updateHighestNumber =function (number){
+  this.highestNumber = number;
+  // this.checkChangedAttribute();
+};
 
 //updateNumberOfCards(number) **number will come from app.js
 // assign number to this.numberOfCards
@@ -48,3 +48,5 @@ const Deck = function () {
 // if card.containsGuessedNumber is true sum the first element of the array of each card.
 // publish total sum.
 //*** this will come from app.js
+
+module.exports = Deck;
