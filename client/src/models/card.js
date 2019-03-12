@@ -57,6 +57,11 @@ Card.prototype.populateNumber = function(reverseBinaryString,currentNumber){
   };
 };
 
+Card.prototype.prettyCard = function () {
+  let pretty = {};
+  pretty = {cardNumbers: this.cardNumbers, containsNumber: this.containsNumber};
+  return pretty;
+};
 //prettyCard
 //this fn will return an object with card numbers and a key/value pair (containsNumber) to know if the guessed number is or isn't included in the card numbers array
 
