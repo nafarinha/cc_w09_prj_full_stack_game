@@ -86,8 +86,12 @@ it('should be able to create a card', function() {
 });
 
 
-xit('should return pretty card', function() {
-
+it('should return pretty card', function() {
+  //fn prettyCard
+  modelCard.createCard();
+  const actual = modelCard.prettyCard();
+  const expected = card2;
+  assert.deepEqual(actual, expected);
 });
 
 xit('should have number inside card', function() {
