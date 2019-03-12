@@ -28,7 +28,7 @@ describe('Card', function() {
 
 });
 
-xit('should be able to populate number', function() {
+it('should be able to populate number', function() {
   const number = 19
   const reverseBinaryNumber = "11001"
   //19 backwards in binary
