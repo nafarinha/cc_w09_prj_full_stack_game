@@ -38,8 +38,13 @@ describe('Deck', function() {
   //getNumberOfCards
   });
 
-  xit('should be able to get the highest number to guess', function() {
-  //getHighestNumber
+  it('should be able to calculate the highest number', function() {
+    //calculateHighestNumber
+    testDeck.numberOfCards = 7;
+    testDeck.calculateHighestNumber();
+    actual = testDeck.highestNumber;
+    expected = 128;
+    assert.strictEqual(actual, expected);
   });
 
   xit('should be able to generate cards', function() {
