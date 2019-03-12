@@ -42,8 +42,12 @@ describe('Deck', function() {
   //getHighestNumber
   });
 
-  xit('should be able to generate cards', function() {
+  it('should be able to generate cards', function() {
     //generateCards;
+    testDeck.generateCards();
+    const actual = 'myFunction';
+    const expected = 'nay';
+    assert.deepStrictEqual(actual,expected)
   })
 
   xit('should be able to calculate the guessed number', function() {
