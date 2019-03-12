@@ -104,12 +104,17 @@ it('should have number inside card', function() {
 
 
 //these tests can only be done after generate cards are successfull
-xit('it should have card number attributes', function() {
+it('it should have cardNumbers attribute', function() {
 
+  const actual = modelCard.cardNumbers;
+  const expected = [];
+  assert.deepStrictEqual(actual,expected);
 });
 
-xit('it should have card contain number attributes', function() {
-
+it('it should have containsNumber attribute', function() {
+  modelCard.containsNumber = true;
+  const expected = modelCard.containsNumber;
+  assert.ok(expected);
 });
 
 it('should be able to update the containsNumber attribute', function() {
@@ -132,11 +137,18 @@ it('it should have total numbers of cards', function() {
   assert.deepStrictEqual(actual, expected);
 });
 
-xit('it should have a lowest number attribute', function() {
-
+it('it should have a lowest number attribute', function() {
+  modelCard.createCard();
+  const actual = modelCard.lowestNumber;
+  const expected = 2;
+  assert.strictEqual(actual,expected);
 });
 
-xit('it should have a highest number attribute', function() {
+it('it should have a highest number attribute', function() {
+  modelCard.createCard();
+  const actual = modelCard.highestNumber;
+  const expected = 127;
+  assert.strictEqual(actual,expected);
 
 });
 
