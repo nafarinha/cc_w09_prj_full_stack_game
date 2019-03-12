@@ -105,8 +105,10 @@ xit('it should have card number attributes', function() {
 
 });
 
-xit('it should have card contain number attributes', function() {
-
+it('it should have containsNumber attribute', function() {
+  modelCard.containsNumber = true;
+  const expected = modelCard.containsNumber;
+  assert.ok(expected);
 });
 
 it('should be able to update the containsNumber attribute', function() {
