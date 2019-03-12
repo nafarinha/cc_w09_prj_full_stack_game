@@ -21,6 +21,11 @@ Deck.prototype.updateHighestNumber =function (number){
 // assign number to this.numberOfCards
 //checkChangedAttribute()
 
+Deck.prototype.updateNumberOfCards = function (number) {
+  this.numberOfCards = number;
+  // this.checkChangedAttribute();
+};
+
 // checkChangedAttribute
   // if this.highestNumber is not null then run fn getNumberOfCards
   // else run fn getHighestNumber
