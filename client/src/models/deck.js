@@ -13,7 +13,7 @@ const Deck = function () {
 //**number will come from app.js
 Deck.prototype.updateHighestNumber =function (number){
   this.highestNumber = number;
-  // this.checkChangedAttribute();
+  this.checkChangedAttribute();
 };
 
 //updateNumberOfCards(number) **number will come from app.js
@@ -22,17 +22,20 @@ Deck.prototype.updateHighestNumber =function (number){
 
 Deck.prototype.updateNumberOfCards = function (number) {
   this.numberOfCards = number;
-  // this.checkChangedAttribute();
+  this.checkChangedAttribute();
 };
 
 // checkChangedAttribute
-  // if this.highestNumber is not null then run fn getNumberOfCards
-  // else run fn getHighestNumber
+  // if this.highestNumber is not null then run fn calculateNumberOfCards
+  // else run fn calculateHighestNumber
 Deck.prototype.checkChangedAttribute = function () {
-
+  if (this.highestNumber !== null) {
+    this.calculateNumberOfCards()
+  }
+  else {
+    this.calculateHighestNumber();
+  };
 };
-
-//getNumberOfCards
 
 Deck.prototype.calculateNumberOfCards = function(){
   const base2 = Math.log2(this.highestNumber);
@@ -43,7 +46,7 @@ Deck.prototype.calculateNumberOfCards = function(){
 
 
 
- //This fn does 2^number of cards and sets the highest number.
+ //This fn power number of cards to a base 2 and sets the highest number.
 Deck.prototype.calculateHighestNumber = function () {
   const highestNumber = 2**this.numberOfCards;
   this.highestNumber = highestNumber;
