@@ -1,4 +1,3 @@
-const RequestHelper = require('../helpers/request_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 const Card = require('./card.js');
 
@@ -56,7 +55,8 @@ Deck.prototype.generateCards = function(){
   for (let iteration = 0; iteration < this.numberOfCards; iteration ++){
     const card = new Card(iteration, this.numberOfCards);
     card.createCard();
-    this.cards.push(card);
+    prettyCard = card.prettyCard();
+    this.cards.push(prettyCard);
   };
 
 };

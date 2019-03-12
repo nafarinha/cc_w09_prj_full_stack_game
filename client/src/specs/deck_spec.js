@@ -15,19 +15,11 @@ describe('Deck', function() {
 
     modelDeckTest =  {cards:[{
         cardNumbers:[1, 3],
-        containsNumber: false,
-        iteration: 0,
-        totalNumberOfCards: 2,
-        lowestNumber: 1,
-        highestNumber:3
+        containsNumber: false
       },
       {
         cardNumbers:[2,3],
-        containsNumber: false,
-        iteration: 1,
-        totalNumberOfCards: 2,
-        lowestNumber: 2,
-        highestNumber:3
+        containsNumber: false
       }],
       highestNumber: 3,
       numberOfCards: 2
