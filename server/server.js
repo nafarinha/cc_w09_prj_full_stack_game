@@ -5,8 +5,10 @@ const path = require('path');
 const publicPath = path.join(__dirname, '../client/public');
 app.use(express.static(publicPath));
 
-//review server.js for front end use.
+app.get('/', (req, res) => {
+  res.sendFile('index.html');
+});
 
 app.listen(3000, function () {
-  console.log(`Listening on port ${this.address().port}`);
+  console.log('\x1b[32m%s\x1b[0m',`Listening on port ${ this.address().port }`);
 });
