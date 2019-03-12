@@ -45,12 +45,16 @@ it('should be able to reverse a string', function() {
 it('should be able to turn number to binary', function() {
   // use function numberToBinary
   const actual = modelCard.numberToBinary(19);
-  const expected = '10011'
+  const expected = '10011';
   assert.strictEqual(actual,expected);
 });
 
-xit('should be able to get number range', function() {
+it('should be able to get number range lowest number', function() {
   //use function getNumberRange
+  modelCard.getNumberRange();
+  const actual = modelCard.lowestNumber;
+  const expected = 1;
+  assert.strictEqual(actual,expected);
 });
 
 xit('should be able to create a card', function() {
