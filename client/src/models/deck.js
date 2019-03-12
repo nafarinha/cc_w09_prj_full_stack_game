@@ -62,10 +62,21 @@ Deck.prototype.generateCards = function(){
 };
 
 
-//getGuessedNumber
+
 // use this.cards - loop through each card
 // if card.containsGuessedNumber is true sum the first element of the array of each card.
 // publish total sum.
 //*** this will come from app.js
+
+Deck.prototype.calculateGuessedNumber = function () {
+  guessedNumber = null;
+
+  for(i = 0; i < this.cards.length; i++) {
+    if (this.cards[i].containsNumber) {
+      guessedNumber += this.cards[i].cardNumbers[0]
+    }
+  }
+  return guessedNumber;
+};
 
 module.exports = Deck;
