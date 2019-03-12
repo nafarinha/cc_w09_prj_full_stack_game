@@ -47,8 +47,20 @@ describe('Deck', function() {
 
   it('should be able to check if highest number attribute changed', function() {
   //checkChangedAttribute
+  testDeck.updateHighestNumber(100);
+  testDeck.checkChangedAttribute();
+  const actual = testDeck.numberOfCards;
+  const expected = 7;
+  assert.strictEqual(actual, expected);
+  });
 
-
+  it('should be able to check if number of cards attribute changed', function() {
+      //checkChangedAttribute
+      testDeck.updateNumberOfCards(7);
+      testDeck.checkChangedAttribute();
+      const actual = testDeck.highestNumber;
+      const expected = 128;
+      assert.strictEqual(actual, expected);
   });
 
   it('should be able to calculate number of cards', function() {
