@@ -12,16 +12,15 @@ const Card = function (iteration, totalNumberOfCards) {
 
 };
 
-
-//createCard
-//this will populate a card using the following logic:
-//getNumberRange()
-// for loop goes here
-  // using this.lowestNumber as a starting point, loop untill this.highestNumber and increment (++)
-  // assign a variable to numberToBinary(currentNumber)
-  // assign a variable to reverseString(binaryVariable)
-    //populateNumber(reverseBinaryVariable,currentNumber)
-
+//looping from 1 until the maximum number is reached using the populateNumber fn to decide if a number goes into a card.
+Card.prototype.createCard = function(){
+  this.getNumberRange();
+  for(let currentNumber = 1; currentNumber <= this.highestNumber; currentNumber++){
+    const binaryNumber = this.numberToBinary(currentNumber);
+    const reverseBinaryString = this.reverseString(binaryNumber);
+    this.populateNumber(reverseBinaryString,currentNumber)
+  };
+};
 
 Card.prototype.getNumberRange = function(){
   lowestNumber = 2** this.iteration;
