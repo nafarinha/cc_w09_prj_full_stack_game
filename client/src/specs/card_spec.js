@@ -121,8 +121,10 @@ xit('it should have a iteration attribute', function() {
 
 });
 
-xit('it should have total numbers of cards', function() {
-
+it('it should have total numbers of cards', function() {
+  const actual = modelCard.totalNumberOfCards;
+  const expected = 7;
+  assert.deepStrictEqual(actual, expected);
 });
 
 xit('it should have a lowest number attribute', function() {
