@@ -137,8 +137,11 @@ it('it should have total numbers of cards', function() {
   assert.deepStrictEqual(actual, expected);
 });
 
-xit('it should have a lowest number attribute', function() {
-
+it('it should have a lowest number attribute', function() {
+  modelCard.createCard();
+  const actual = modelCard.lowestNumber;
+  const expected = 2;
+  assert.strictEqual(actual,expected);
 });
 
 xit('it should have a highest number attribute', function() {
