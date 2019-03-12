@@ -7,12 +7,14 @@ const FormView = function (formElement) {
 
 FormView.prototype.setupEventListeners = function(){
   this.element.addEventListener('click',function(evt){
+    if (evt.target.id = 'number-of-cards-btn'){
+      const numButton = document.querySelector('#number-of-cards-btn');
+      numButton.classList.replace('hidden','show')
+      console.log(numButton);
+    }
     evt.preventDefault();
     console.log(evt.target);
-  });
-  this.element.addEventListener('click',function(evt){
-    evt.preventDefault();
-    console.log(evt.target);
+  })
 }
 
 // The start site with Title - Information - option to play by number of cards
