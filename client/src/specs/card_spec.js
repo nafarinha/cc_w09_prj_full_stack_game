@@ -101,8 +101,11 @@ xit('should have number inside card', function() {
 
 
 //these tests can only be done after generate cards are successfull
-xit('it should have card number attributes', function() {
+it('it should have cardNumbers attribute', function() {
 
+  const actual = modelCard.cardNumbers;
+  const expected = [];
+  assert.deepStrictEqual(actual,expected);
 });
 
 xit('it should have card contain number attributes', function() {
