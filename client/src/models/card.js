@@ -47,13 +47,16 @@ Card.prototype.reverseString = function(string) {
     return string.split("").reverse().join("");
 };
 
-//populateNumber(reverseBinaryVariable,currentNumber)
-// assign a let variable to be 0 - e.g counter
-//using a for of (loop through the reversedBinaryVariable)
-// assign a varible (index) to counter ++
-// conditional if statement with an AND operator .
-  // if bit in reverseBinaryVariable equals '1' AND index equals this.iteration
-  // if true push number into the number array (this.cardNumbers)
+// populateNumber loops through each bit inside a reversed binary string and pushes this into the current card if the bit value = 1 and the index position of this bit matches this.iteration (corresponds to the card number in the deck)
+Card.prototype.populateNumber = function(reverseBinaryString,currentNumber){
+  let counter = 0;
+  for (let bit of reverseBinaryString){
+    const index = counter++;
+    if (bit ==='1' && index === this.iteration){
+        this.cardNumbers.push(currentNumber);
+    };
+  };
+};
 
 //prettyCard
 //this fn will return an object with card numbers and a key/value pair (containsNumber) to know if the guessed number is or isn't included in the card numbers array

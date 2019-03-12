@@ -33,7 +33,7 @@ it('should be able to populate number', function() {
   const reverseBinaryNumber = "11001"
   //19 backwards in binary
   modelCard.populateNumber(reverseBinaryNumber, number);
-  assert.strictEqual(modelCard.cardNumbers, 19);
+  assert.deepStrictEqual(modelCard.cardNumbers, [19]);
 });
 
 it('should be able to reverse a string', function() {
