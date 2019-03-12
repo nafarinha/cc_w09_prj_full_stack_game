@@ -1,9 +1,9 @@
 // const CardView = require('./views/card_view.js');
 // const BoardView = require('./views/board_view.js');
-//const FormView = require('./views/form_view.js');
+const FormView = require('./views/form_view.js');
 //const InfoView = require('./views/info_view.js');
 //const ResultView = require('./views/result_view.js');
-// const Deck = require('./models/deck.js');
+const Deck = require('./models/deck.js');
 
 document.addEventListener('DOMContentLoaded',()=>{
   console.log('Hiya');
@@ -19,6 +19,27 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 //at the start of the game you get a input from user, you get a number.
 //you pass this number here.
+
+
+  const formView = new FormView;
+
+    document.addEventListener('click',(evt)=>{
+    
+    const deck = new Deck;
+    //on addEventListener -- user wants highest number
+
+    deck.updateHighestNumber(userInput);
+    deck.generateCards();
+
+    //on addEventListener -- user wants number of cards
+
+    deck.updateNumberOfCards(userInput);
+    deck.generateCards();
+
+  };
+
+
+
 
 
 });
