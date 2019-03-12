@@ -40,9 +40,9 @@ const Card = function (iteration, totalNumberOfCards) {
 //     return (number).toString(2);
 // };
 
-// function reverseString(string) {
-//     return string.split("").reverse().join("");
-// };
+Card.prototype.reverseString = function(string) {
+    return string.split("").reverse().join("");
+};
 
 //populateNumber(reverseBinaryVariable,currentNumber)
 // assign a let variable to be 0 - e.g counter
@@ -62,4 +62,4 @@ const Card = function (iteration, totalNumberOfCards) {
 //this fn is called when the guess number is inluded in the card numbers.
 //The fn updates this.containsNumber to true.
 
-module.exports = Card
+module.exports = Card;

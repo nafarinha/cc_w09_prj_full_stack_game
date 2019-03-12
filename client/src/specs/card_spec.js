@@ -37,8 +37,9 @@ xit('should be able to populate number', function() {
 });
 
 it('should be able to reverse a string', function() {
-  // const actual = Card.reverseString("10011")
-  // look at better
+  const actual = modelCard.reverseString('10011');
+  expected = '11001'
+  assert.strictEqual(actual, expected)
 });
 
 xit('should be able to turn number to binary', function() {
