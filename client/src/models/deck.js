@@ -69,7 +69,7 @@ Deck.prototype.generateCards = function(){
 //*** this will come from app.js
 
 Deck.prototype.calculateGuessedNumber = function () {
-  guessedNumber = null;
+  let guessedNumber = null;
 
   for(i = 0; i < this.cards.length; i++) {
     if (this.cards[i].containsNumber) {

@@ -78,7 +78,7 @@ describe('Deck', function() {
     assert.deepEqual(actual,expected)
   })
 
-  xit('should be able to calculate the guessed number', function() {
+  it('should be able to calculate the guessed number', function() {
     //calculateGuessedNumber
 
     testDeck.cards = [
