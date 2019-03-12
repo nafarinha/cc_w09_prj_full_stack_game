@@ -54,8 +54,8 @@ describe('Deck', function() {
   it('should be able to update highest number', function() {
     //updateHighestNumber
     testDeck.updateHighestNumber(10);
-    const actual = 10;
-    const expected = testDeck.highestNumber;
+    const actual = testDeck.highestNumber;
+    const expected = 10;
     assert.strictEqual(actual,expected);
   });
 
