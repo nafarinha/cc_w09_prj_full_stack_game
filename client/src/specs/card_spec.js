@@ -94,10 +94,13 @@ it('should return pretty card', function() {
   assert.deepEqual(actual, expected);
 });
 
-xit('should have number inside card', function() {
+it('should have number inside card', function() {
 
+  modelCard.cardNumbers.push(1);
+  const actual = modelCard.cardNumbers;
+  const expected = [1];
+  assert.deepStrictEqual(actual, expected);
 });
-
 
 
 //these tests can only be done after generate cards are successfull
@@ -119,12 +122,16 @@ it('should be able to update the containsNumber attribute', function() {
   assert.ok(expected);
 });
 
-xit('it should have a iteration attribute', function() {
-
+it('it should have a iteration attribute', function() {
+  const actual = modelCard.iteration;
+  const expected = 1;
+  assert.deepStrictEqual(actual, expected);
 });
 
-xit('it should have total numbers of cards', function() {
-
+it('it should have total numbers of cards', function() {
+  const actual = modelCard.totalNumberOfCards;
+  const expected = 7;
+  assert.deepStrictEqual(actual, expected);
 });
 
 xit('it should have a lowest number attribute', function() {
