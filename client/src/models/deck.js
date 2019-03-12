@@ -36,11 +36,16 @@ Deck.prototype.updateHighestNumber =function (number){
  // floor the result above
  // asign resul of floor to this.highestNumber
 
-//generateCards
-//using this.numberOfCards
-// loop up to this.numberOfCards
-// for each iteration create a Card object(iteration, this.numberOfCards) and push it into this.cards
-// ***this will be called from App.js
+//generateCards - create a card and push it into this.cards based on this.numberOfCards // ***this will be called from App.js
+
+Deck.prototype.generateCards = function(){
+  for (let iteration = 0; iteration < this.numberOfCards; iteration ++){
+    const card = new Card(iteration, this.numberOfCards);
+    card.createCard();
+    this.cards.push(card);
+  };
+
+};
 
 
 //getGuessedNumber

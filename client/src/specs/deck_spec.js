@@ -5,13 +5,33 @@ const Card = require('../models/card.js');
 describe('Deck', function() {
 
   let deck;
-
   let testDeck;
+  let modelDeckTest;
 
   beforeEach(function() {
 
     card1 = new Card;
     testDeck = new Deck;
+
+    modelDeckTest =  {cards:[{
+        cardNumbers:[1, 3],
+        containsNumber: false,
+        iteration: 0,
+        totalNumberOfCards: 2,
+        lowestNumber: 1,
+        highestNumber:3
+      },
+      {
+        cardNumbers:[2,3],
+        containsNumber: false,
+        iteration: 1,
+        totalNumberOfCards: 2,
+        lowestNumber: 2,
+        highestNumber:3
+      }],
+      highestNumber: 3,
+      numberOfCards: 2
+    };
 
   });
 
@@ -44,10 +64,12 @@ describe('Deck', function() {
 
   it('should be able to generate cards', function() {
     //generateCards;
+    testDeck.numberOfCards = 2;
+    testDeck.highestNumber = 3;
     testDeck.generateCards();
-    const actual = 'myFunction';
-    const expected = 'nay';
-    assert.deepStrictEqual(actual,expected)
+    const actual = testDeck;
+    const expected = modelDeckTest;
+    assert.deepEqual(actual,expected)
   })
 
   xit('should be able to calculate the guessed number', function() {
