@@ -13,7 +13,7 @@
     "webpack-cli": "^3.2.3"
   },
   "scripts": {
-    "test": "mocha specs",
+    "test": "mocha client/src/specs",
     "start": "node server/server.js",
     "build": "webpack -w",
     "server:dev": "nodemon server/server.js"

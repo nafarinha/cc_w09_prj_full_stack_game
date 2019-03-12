@@ -34,7 +34,7 @@ xit('should be able to populate number', function() {
   assert.strictEqual(modelCard.cardNumbers, 19);
 });
 
-xit('should be able to reverse a string', function() {
+it('should be able to reverse a string', function() {
   // const actual = Card.reverseString("10011")
   // look at better
 });
