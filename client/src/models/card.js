@@ -1,4 +1,3 @@
-const RequestHelper = require('../helpers/request_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 
 
@@ -57,19 +56,20 @@ Card.prototype.populateNumber = function(reverseBinaryString,currentNumber){
   };
 };
 
+
+
+//this fn will return an object with card numbers and a key/value pair (containsNumber) to know if the guessed number is or isn't included in the card numbers array.
 Card.prototype.prettyCard = function () {
   let pretty = {};
   pretty = {cardNumbers: this.cardNumbers, containsNumber: this.containsNumber};
   return pretty;
 };
-//prettyCard
-//this fn will return an object with card numbers and a key/value pair (containsNumber) to know if the guessed number is or isn't included in the card numbers array
-
-// prettyCard = {this.cardNumbers, this.containsNumber};
-// return prettyCard;
 
 //updateContainsNumber()
 //this fn is called when the guess number is inluded in the card numbers.
 //The fn updates this.containsNumber to true.
+Card.prototype.updateContainsNumber = function () {
+  this.containsNumber = true;
+};
 
 module.exports = Card;
