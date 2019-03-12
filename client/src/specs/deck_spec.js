@@ -24,8 +24,12 @@ describe('Deck', function() {
     assert.strictEqual(actual,expected);
   });
 
-  xit('should be able to update the total number of cards', function() {
+  it('should be able to update the total number of cards', function() {
     //updateNumberOfCards
+    testDeck.updateNumberOfCards(100);
+    const actual = testDeck.numberOfCards;
+    const expected = 100;
+    assert.strictEqual(actual,expected);
 
   });
 
@@ -34,8 +38,13 @@ describe('Deck', function() {
 
   });
 
-  xit('should be able to get number of cards', function() {
-  //getNumberOfCards
+  it('should be able to calculate number of cards', function() {
+  //calculateNumberOfCards
+  testDeck.highestNumber = 128
+  testDeck.calculateNumberOfCards();
+  const actual = testDeck.numberOfCards;
+  const expected = 7;
+  assert.strictEqual(actual,expected);
   });
 
   it('should be able to calculate the highest number', function() {

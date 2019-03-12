@@ -21,7 +21,12 @@ Deck.prototype.updateHighestNumber =function (number){
 // assign number to this.numberOfCards
 //checkChangedAttribute()
 
+Deck.prototype.updateNumberOfCards = function (number) {
+  this.numberOfCards = number;
+  // this.checkChangedAttribute();
+};
 
+// checkChangedAttribute
   // if this.highestNumber is not null then run fn getNumberOfCards
   // else run fn getHighestNumber
 Deck.prototype.checkChangedAttribute = function () {
@@ -29,9 +34,13 @@ Deck.prototype.checkChangedAttribute = function () {
 };
 
 //getNumberOfCards
-  // Math.log2(this.highestNumber)
-  //  Math.ceil(result of log2)
-  // assing result of ceil to this.numberOfCards.
+
+Deck.prototype.calculateNumberOfCards = function(){
+  const base2 = Math.log2(this.highestNumber);
+  const numberOfCards = Math.ceil(base2);
+  this.numberOfCards = numberOfCards;
+};
+
 
 
 
