@@ -6,16 +6,21 @@ const FormView = function (formElement) {
 };
 
 FormView.prototype.setupEventListeners = function(){
-  this.element.addEventListener('click',function(evt){
-    if (evt.target.id = 'number-of-cards-btn'){
-      const numButton = document.querySelector('#number-of-cards-btn');
-      numButton.classList.replace('hidden','show')
-      console.log(numButton);
-    }
-    evt.preventDefault();
-    console.log(evt.target);
-  })
-}
+  const cardButton = document.querySelector('#number-of-cards-btn');
+  cardButton.addEventListener('click',function(evt){
+    const inputBox = document.querySelector('#cards-number-container');
+    inputBox.classList.replace('hidden','show');
+    console.log(inputBox);
+  });
+  const numbersButton = document.querySelector('#max-number-btn');
+  numbersButton.addEventListener('click',function(evt){
+    inputBox1 = document.querySelector('#highest-number-container');
+    inputBox1.classList.replace('hidden','show');
+    console.log(inputBox1);
+  });
+};
+
+
 
 // The start site with Title - Information - option to play by number of cards
 // or the highest number.
