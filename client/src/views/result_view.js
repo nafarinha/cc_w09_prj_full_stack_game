@@ -30,8 +30,9 @@ ResultView.prototype.render = function () {
 
 ResultView.prototype.showResultButton = function (result){
   const button = document.createElement('button');
+  button.id = ('result-btn');
   button.classList.add('result-button');
-  button.textContent = "Show me"
+  button.textContent = "Show me";
 
   button.addEventListener('click', (evt) => {
     const result = document.createElement('h2')
