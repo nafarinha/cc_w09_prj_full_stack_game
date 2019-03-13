@@ -12,42 +12,15 @@ const InfoView = function () {
 //   });
 // };
 
-InfoView.prototype.handleInput = (evt) => {
-  console.log('Something was typed');
-  const num = evt.target.value;
 
-  const resultParameter = document.querySelector('#game-parameter-result');
-  resultParameter.textContent = `You can choose a number from 1 to ${num}`;
-};
-//TEMPLATE
-// const handleInput = (event) => {
-//   console.log('Something has been typed');
-//   const text = event.target.value;
-//
-//   const resultParagraph = document.querySelector('#input-result');
-//   resultParagraph.textContent = `You typed: ${text}`;
-//
-// }
-
-InfoView.prototype.numInput = function () {
-  const inputtedNum = document.querySelector('#cardsNumber');
-  inputtedNum.addEventListener('input', this.handleInput);
+InfoView.prototype.readInput = function() {
+  PubSub.subscribe('FormView:number-submitted', (evt) => {
+    inputtedNum = evt.detail;
+    const resultParameter = document.querySelector('#game-parameter-result');
+    resultParameter.textContent = `Choose a number from 1 to ${inputtedNum}.`;
+  })
 };
 
-// const textInput = document.querySelector('#input');
-// textInput.addEventListener('input', handleInput);
-
-
-//END TEMPLATE
-
-
-
-  // InfoView.prototype.displayGameParameter = function (gameParameter) {
-  //   const parameterElement = document.querySelector('#cardsNumber');
-  //   parameterElement.
-  //   console.log(parameterElement);
-  //   resultElement.textContent = `You entered ${gameParameter} cards.`;
-  // };
 
 // This view sends information to FormView about the highest number to choose from or
 // how many cards to play with
