@@ -13,8 +13,10 @@ FormView.prototype.setupEventListeners = function(){
 
     const inputtedNum = document.querySelector('#cardsNumber');
     inputtedNum.addEventListener('input', function(evt) {
+      const playButton = document.querySelector('#play-game');
+      playButton.classList.replace('hidden','show');
       PubSub.publish('FormView:number-inputted', evt.target.value);
-    })
+    });
   });
 
   // const numbersButton = document.querySelector('#max-number-btn');
