@@ -28,6 +28,7 @@ formView.setupEventListeners();
 
 const resultViewContainer = document.querySelector('#result-view-container');
 const resultView = new ResultView();
+resultView.bindEvents();
 
 const infoViewContainer = document.querySelector('#game-parameters-contaier');
 const infoView = new InfoView();
