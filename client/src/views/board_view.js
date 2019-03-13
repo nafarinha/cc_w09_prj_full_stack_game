@@ -33,6 +33,8 @@ BoardView.prototype.addButtons = function(card){
   yesButton.addEventListener('click',(evt)=>{
     card.containsNumber = true;
     if (this.cards.length === (card.iteration +1)) {
+      console.log(this.container);
+      this.container.innerHTML='';
       this.publishAnswers();
     };
   });
@@ -44,6 +46,8 @@ BoardView.prototype.addButtons = function(card){
   noButton.addEventListener('click',(evt)=>{
 
     if (this.cards.length === (card.iteration +1)) {
+      console.log('nobut',this.container);
+      this.container.innerHTML = '';
       this.publishAnswers();
     }
   });

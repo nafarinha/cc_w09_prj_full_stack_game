@@ -29,6 +29,7 @@ FormView.prototype.setupEventListeners = function(){
   playButton.addEventListener('submit',(evt)=>{
     evt.preventDefault();
     PubSub.publish('FormView:sumbit',evt.target.cardsNumber.value);
+    playButton.innerHTML ='';
   });
 };
 

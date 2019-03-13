@@ -1,5 +1,3 @@
-const PubSub = require('../helpers/pub_sub.js');
-
 const CardView = function (prettyCard) {
   this.container = null;
   this.prettyCard = prettyCard;
