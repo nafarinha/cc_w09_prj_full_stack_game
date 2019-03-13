@@ -1,6 +1,7 @@
 body {
   /* background-color: #F2F3F4; */
-  background-color: #709FB0;
+  /* background-color: #709FB0; */
+  background-image: url("jj-ying-236821-unsplash.jpg");
 }
 
 .hidden{
@@ -20,8 +21,9 @@ body {
   border: solid 2px black;
   border-radius: 30px 30px;
   /* background-color: #2980B9; */
-  background-color: #726A95;
+  /* background-color: #726A95; */
   padding: 10px;
+  box-shadow: #283747 2px 2px;
 }
 
 p {
@@ -57,7 +59,7 @@ p {
 }
 
 .result-button{
-  background-color:#e7e7e7; color: black;
+  background-color:#A0C1B8; color: black;
   font-size: 24px;
 }
 
@@ -70,9 +72,11 @@ input[type=submit]{
 
 
 #number-of-cards-btn {
-  font-size:20px;
+  font-size:24px;
   color:black;
   margin-top: 40px;
+  background-color: #A0C1B8;
+  border-radius: 4px;
 }
 
 #cards-number-container{
@@ -84,12 +88,15 @@ input[type=submit]{
   width: 50px;
   height: 20px;
   border-radius: 4px;
+  font-size: 14px;
 }
 
 h1 {
   text-align: center;
   text-shadow: 1px 1px grey;
+  font-family: arial;
 }
+
 
 .input.button{
   font-size:20px;
@@ -110,7 +117,8 @@ h3 {
   border-radius: 6px;
   padding:15px;
   /* background-color: #85C1E9  ; */
-  background-color: #A0C1B8;
+  /* background-color: #A0C1B8; */
+  font-size: 20px;
 }
 
 h2 {
@@ -119,8 +127,10 @@ h2 {
 }
 
 div p{
-  background-color: #F2F3F4;
+  background-color: #A0C1B8;
+  /* background-color: #F2F3F4; */
   border: border: solid 2px black;
   border-radius: 22px;
   margin: 4px;
+  /* background-color:#D7DBDD  ; */
 }
