@@ -34,14 +34,13 @@ const infoView = new InfoView();
 
 
     //updates number of cards based on user input
-    deck.updateNumberOfCards(#)
+    // deck.updateNumberOfCards(#)
     //returns the highest number
     deck.highestNumber
     //PubSub.publishes  cdskhvsdfigsdfkj
 
 
 
-const boardViewContainer = document.querySelector();
 
 //
 // on addEventListener -- user wants highest number
@@ -54,7 +53,7 @@ const boardViewContainer = document.querySelector();
     // deck.updateNumberOfCards(userInput);
     // deck.generateCards();
 
-
+const boardViewContainer = document.querySelector('#board-view-container');
 
 
 const boardView = new BoardView(boardViewContainer);
