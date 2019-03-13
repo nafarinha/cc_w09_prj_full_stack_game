@@ -11,7 +11,8 @@ const Deck = function () {
 
 Deck.prototype.bindEvents = function(){
   PubSub.subscribe('FormView:sumbit',(evt)=>{
-    console.log(evt.detail);
+    this.updateNumberOfCards(evt.detail);
+    this.generateCards();
   });
 };
 

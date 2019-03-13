@@ -8,34 +8,37 @@ const BoardView = function (container) {
 
 BoardView.prototype.bindEvents = function(){
   PubSub.subscribe('Deck:card-data-Ready',(evt)=>{
-    console.log(evt.detail);
-    this.cards = this.renderCardView(evt.detail);
+    this.cards = evt.detail;
+    this.renderCardView(evt.detail);
   });
 };
 //get info from model (pubsub) subscribe and call renderCardView with the cards -- update this.cards with cards.
 
 BoardView.prototype.renderCardView = function(cards){
+  console.log(this.cards);
   cards.forEach((card)=>{
     card.prettyCard();
     const cardView = new CardView(card);
     const cardDetail = cardView.createCardView();
     this.container.appendChild(cardDetail)
-    this.addButtons();
+    this.addButtons(card);
+
   });
 };
 
-BoardView.prototype.addButtons = function(){
+BoardView.prototype.addButtons = function(card){
   const yesButton = document.createElement('button');
   yesButton.textContent = 'Yes';
   yesButton.addEventListener('click',(evt)=>{
-    //run render again
+    card.containsNumber = true;
+    console.log(card);
   });
   this.container.appendChild(yesButton);
 
   const noButton = document.createElement('button');
   noButton.textContent = 'No';
   noButton.addEventListener('click',(evt)=>{
-    //run render again
+    console.log('no');
   });
   this.container.appendChild(noButton);
 
