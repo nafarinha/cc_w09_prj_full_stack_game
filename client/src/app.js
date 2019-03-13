@@ -2,7 +2,7 @@
 // const BoardView = require('./views/board_view.js');
 const FormView = require('./views/form_view.js');
 //const InfoView = require('./views/info_view.js');
-//const ResultView = require('./views/result_view.js');
+const ResultView = require('./views/result_view.js');
 const Deck = require('./models/deck.js');
 
 document.addEventListener('DOMContentLoaded',()=>{
@@ -24,12 +24,10 @@ const form = document.querySelector('form#games-form');
 const formView = new FormView(form);
 formView.setupEventListeners();
 
-  //this should be in FormView
-    // document.addEventListener('click',function(evt)=>{
-    //   this.element = formElement;
-    //
-    // }
-  //
+const resultViewContainer = document.querySelector('#result-view-container');
+const resultView = new ResultView();
+
+
     // const deck = new Deck;
     // //on addEventListener -- user wants highest number
     //
