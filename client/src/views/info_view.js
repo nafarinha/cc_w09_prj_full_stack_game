@@ -14,10 +14,22 @@ const InfoView = function () {
 
 
 InfoView.prototype.readInput = function() {
-  PubSub.subscribe('FormView:number-submitted', (evt) => {
-    inputtedNum = evt.detail;
+  //this channel must change to get the value from the model
+  PubSub.subscribe('Deck:game-parameters', (evt) => {
+    highestNumberParameter = evt.detail;
+
     const resultParameter = document.querySelector('#game-parameter-result');
-    resultParameter.textContent = `Choose a number from 1 to ${inputtedNum}.`;
+    resultParameter.textContent = `Choose a number from 1 to ${highestNumberParameter}.`;
+  });
+
+
+  PubSub.subscribe('FormView:number-inputted', (evt) => {
+
+
+    const inputtedNum = evt.detail;
+
+    PubSub.publish('InfoView:game-parameters-input', inputtedNum);
+
   })
 };
 

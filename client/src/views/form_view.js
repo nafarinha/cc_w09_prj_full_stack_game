@@ -10,11 +10,10 @@ FormView.prototype.setupEventListeners = function(){
   cardButton.addEventListener('click',function(evt){
     const inputBox = document.querySelector('#cards-number-container');
     inputBox.classList.replace('hidden','show');
-    console.log(inputBox);
 
     const inputtedNum = document.querySelector('#cardsNumber');
     inputtedNum.addEventListener('input', function(evt) {
-      PubSub.publish('FormView:number-submitted', evt.target.value);
+      PubSub.publish('FormView:number-inputted', evt.target.value);
     })
   });
 
@@ -25,10 +24,8 @@ FormView.prototype.setupEventListeners = function(){
   //   console.log(inputBox1);
   // });
   const playButton = document.querySelector('#games-form');
-  console.log(playButton);
   playButton.addEventListener('submit',(evt)=>{
     evt.preventDefault();
-    console.log(evt.target.cardsNumber.value);
     PubSub.publish('FormView:sumbit',evt.target.cardsNumber.value);
   });
 };
