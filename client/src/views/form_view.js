@@ -11,7 +11,15 @@ FormView.prototype.setupEventListeners = function(){
     const inputBox = document.querySelector('#cards-number-container');
     inputBox.classList.replace('hidden','show');
     console.log(inputBox);
+
+  const inputtedNum = document.querySelector('#cardsNumber');
+  inputtedNum.addEventListener('input', function(evt) {
+    PubSub.publish('FormView:number-submitted', evt)
+    console.log('formView',evt.target.value);
+  })
+
   });
+
   const numbersButton = document.querySelector('#max-number-btn');
   numbersButton.addEventListener('click',function(evt){
     inputBox1 = document.querySelector('#highest-number-container');
