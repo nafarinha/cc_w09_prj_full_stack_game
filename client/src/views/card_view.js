@@ -9,13 +9,21 @@ CardView.prototype.createDiv = function(){
   const div = document.createElement('div');
   div.classList.add('card-container');
 
+  this.container = div
+  const numberElements = this.createParagraphElements();
 
-const numberElements = this.createParagraphElements();
-div.appendChild(numberElements);
+  return div;
 
 };
 
-
+CardView.prototype.createParagraphElements = function(){
+  const numbers = this.prettyCard.cardNumbers;
+  numbers.forEach((number)=>{
+    const numberElement = document.createElement('p');
+    numberElement.textContent = number;
+    this.container.appendChild(numberElement);
+  });
+};
 //each card takes a number range (min/max)
 // dont have to do a pubsub here. Do it in app.js. use deck model,
 //access one card and pass them into boardview and pass a singlecard
