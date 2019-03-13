@@ -33,7 +33,7 @@ ResultView.prototype.render = function () {
   resultContainer.appendChild(resultButton);
 };
 
-ResultView.prototype.showResultButton = function (result)
+ResultView.prototype.showResultButton = function (result){
   const button = document.createElement('button');
   button.classList.add('result-button');
   button.value = result;
