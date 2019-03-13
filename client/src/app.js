@@ -26,17 +26,20 @@ const form = document.querySelector('form#games-form');
 const formView = new FormView(form);
 formView.setupEventListeners();
 
+const infoViewContainer = document.querySelector('#game-parameters-container');
+const infoView = new InfoView();
+infoView.numInput;
+
 const resultViewContainer = document.querySelector('#result-view-container');
 const resultView = new ResultView();
 
-const infoViewContainer = document.querySelector('#game-parameters-contaier');
-const infoView = new InfoView();
+
 
 
     //updates number of cards based on user input
-    deck.updateNumberOfCards(#)
+    //deck.updateNumberOfCards(#)
     //returns the highest number
-    deck.highestNumber
+    //deck.highestNumber
     //PubSub.publishes  cdskhvsdfigsdfkj
 
 
