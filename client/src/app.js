@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 //you pass this number here.
 
 const deck = new Deck();
+deck.bindEvents();
 
 const form = document.querySelector('form#games-form');
 const formView = new FormView(form);
@@ -32,6 +33,7 @@ infoView.numInput;
 
 const resultViewContainer = document.querySelector('#result-view-container');
 const resultView = new ResultView();
+resultView.bindEvents();
 
 
 
