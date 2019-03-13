@@ -3,7 +3,6 @@ const BoardView = require('./views/board_view.js');
 const FormView = require('./views/form_view.js');
 const InfoView = require('./views/info_view.js');
 const ResultView = require('./views/result_view.js');
-const Deck = require('./models/deck.js');
 
 document.addEventListener('DOMContentLoaded',()=>{
   console.log('Hiya');
@@ -20,15 +19,13 @@ document.addEventListener('DOMContentLoaded',()=>{
 //at the start of the game you get a input from user, you get a number.
 //you pass this number here.
 
-const deck = new Deck();
-
 const form = document.querySelector('form#games-form');
 const formView = new FormView(form);
 formView.setupEventListeners();
 
 const infoViewContainer = document.querySelector('#game-parameters-container');
 const infoView = new InfoView();
-infoView.numInput;
+infoView.readInput();
 
 const resultViewContainer = document.querySelector('#result-view-container');
 const resultView = new ResultView();
