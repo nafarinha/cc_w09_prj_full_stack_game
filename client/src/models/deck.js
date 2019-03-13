@@ -19,7 +19,10 @@ Deck.prototype.bindEvents = function(){
     let highestNumberParameter = this.highestNumber -1;
 
     if (this.numberOfCards > 4) {
-      highestNumberParameter = (Math.round(Math.floor(this.highestNumber) / 10) * 10);
+      highestNumberParameter = (Math.floor((this.highestNumber) / 10) * 10);
+    }
+    else if (this.numberOfCards <=4 && this.numberOfCards >= 2) {
+      highestNumberParameter -= 1;
     };
     PubSub.publish('Deck:game-parameters', highestNumberParameter);
   });
