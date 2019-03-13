@@ -1,7 +1,7 @@
 // const CardView = require('./views/card_view.js');
 const BoardView = require('./views/board_view.js');
 const FormView = require('./views/form_view.js');
-//const InfoView = require('./views/info_view.js');
+const InfoView = require('./views/info_view.js');
 const ResultView = require('./views/result_view.js');
 const Deck = require('./models/deck.js');
 
@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 //at the start of the game you get a input from user, you get a number.
 //you pass this number here.
 
+const deck = new Deck();
+
 const form = document.querySelector('form#games-form');
 const formView = new FormView(form);
 formView.setupEventListeners();
@@ -27,10 +29,21 @@ formView.setupEventListeners();
 const resultViewContainer = document.querySelector('#result-view-container');
 const resultView = new ResultView();
 
+const infoViewContainer = document.querySelector('#game-parameters-contaier');
+const infoView = new InfoView();
+
+
+    //updates number of cards based on user input
+    deck.updateNumberOfCards(#)
+    //returns the highest number
+    deck.highestNumber
+    //PubSub.publishes  cdskhvsdfigsdfkj
+
+
+
 const boardViewContainer = document.querySelector();
 
-
-// 
+//
 // on addEventListener -- user wants highest number
     //
     // deck.updateHighestNumber(userInput);
