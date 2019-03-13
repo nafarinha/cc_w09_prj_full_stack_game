@@ -32,7 +32,6 @@ BoardView.prototype.addButtons = function(card){
   yesButton.textContent = 'Yes';
   yesButton.addEventListener('click',(evt)=>{
     card.containsNumber = true;
-    console.log(this.cards.length, card.iteration +1)
     if (this.cards.length === (card.iteration +1)) {
       this.publishAnswers();
     };
