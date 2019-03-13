@@ -1,7 +1,18 @@
 const PubSub = require('../helpers/pub_sub.js');
 
-const CardView = function (container, prettyCardObject) {
-  this.= ;
+const CardView = function (prettyCard) {
+  this.container = null;
+  this.prettyCard = prettyCard;
+};
+
+CardView.prototype.createDiv = function(){
+  const div = document.createElement('div');
+  div.classList.add('card-container');
+
+
+const numberElements = this.createParagraphElements();
+div.appendChild(numberElements);
+
 };
 
 
