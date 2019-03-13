@@ -11,9 +11,19 @@ BoardView.prototype.renderCardView = function(cards){
     const cardView = new CardView(card);
     const cardDetail = cardView.createCardView();
     this.container.appendChild(cardDetail)
+    this.addButtons();
   };
 };
 
+BoardView.prototype.addButtons = function(){
+  const yesButton = document.createElement('button');
+  yesButton.textContent = 'Yes';
+  this.container.appendChild(yesButton);
+
+  const noButton = document.createElement('button');
+  noButton.textContent = 'No';
+  this.container.appendChild(noButton);
+};
 
 // Takes the answer from player 'yes' or 'no' and publishes to the model
 //Needs two BUTTONS
