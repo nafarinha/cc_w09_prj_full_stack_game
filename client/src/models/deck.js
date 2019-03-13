@@ -10,6 +10,17 @@ const Deck = function () {
 };
 
 Deck.prototype.bindEvents = function(){
+  PubSub.subscribe('InfoView:game-parameters-input', (evt) => {
+    const inputtedNum = evt.detail;
+
+    this.numberOfCards = inputtedNum;
+    this.calculateHighestNumber();
+
+    const highestNumberParameter = (Math.round(this.highestNumber / 10) * 10);
+
+    PubSub.publish('Deck:game-parameters', highestNumberParameter);
+  });
+
   PubSub.subscribe('FormView:sumbit',(evt)=>{
     this.updateNumberOfCards(evt.detail);
     this.generateCards();

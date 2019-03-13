@@ -11,18 +11,19 @@
 
     <form id="games-form">
       <button type="button" id="number-of-cards-btn">Play with Cards</button>
-      <button type="button" id="max-number-btn">Play using Numbers</button>
+      <!-- <button type="button" id="max-number-btn">Play using Numbers</button> -->
       <br>
       <div class="hidden" id = "cards-number-container">
         <label for="cardsNumber">Choose the number of cards to play with:</label>
         <input type="number" id="cardsNumber"/>
       </div>
-      <div class="hidden" id = "highest-number-container">
+      <!-- <div class="hidden" id = "highest-number-container">
         <label for="highestNumber">Choose the highest number to guess:</label>
         <input type="number" id="highestNumber"/>
-      </div>
+      </div> -->
+      <div id="game-parameters-container"></div>
+
       <input type="submit" id="play-game" value="Play">
-      <div id="game-parameters-contaier"></div>
     </form>
     <div id="card-wrapper">
       <div id ="board-view-container"></div>
@@ -30,5 +31,6 @@
     <section id ="result-view-container"></section>
     <h3>How to Play:</h3>
     <p>Instructions go here...</p>
+    <p id="game-parameter-result"></p>
   </body>
 </html>

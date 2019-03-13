@@ -10,19 +10,22 @@ FormView.prototype.setupEventListeners = function(){
   cardButton.addEventListener('click',function(evt){
     const inputBox = document.querySelector('#cards-number-container');
     inputBox.classList.replace('hidden','show');
-    console.log(inputBox);
+
+    const inputtedNum = document.querySelector('#cardsNumber');
+    inputtedNum.addEventListener('input', function(evt) {
+      PubSub.publish('FormView:number-inputted', evt.target.value);
+    })
   });
-  const numbersButton = document.querySelector('#max-number-btn');
-  numbersButton.addEventListener('click',function(evt){
-    inputBox1 = document.querySelector('#highest-number-container');
-    inputBox1.classList.replace('hidden','show');
-    console.log(inputBox1);
-  });
+
+  // const numbersButton = document.querySelector('#max-number-btn');
+  // numbersButton.addEventListener('click',function(evt){
+  //   inputBox1 = document.querySelector('#highest-number-container');
+  //   inputBox1.classList.replace('hidden','show');
+  //   console.log(inputBox1);
+  // });
   const playButton = document.querySelector('#games-form');
-  console.log(playButton);
   playButton.addEventListener('submit',(evt)=>{
     evt.preventDefault();
-    console.log(evt.target.cardsNumber.value);
     PubSub.publish('FormView:sumbit',evt.target.cardsNumber.value);
   });
 };

@@ -1,9 +1,8 @@
-// const CardView = require('./views/card_view.js');
+const Deck = require('./models/deck.js')
 const BoardView = require('./views/board_view.js');
 const FormView = require('./views/form_view.js');
 const InfoView = require('./views/info_view.js');
 const ResultView = require('./views/result_view.js');
-const Deck = require('./models/deck.js');
 
 document.addEventListener('DOMContentLoaded',()=>{
   console.log('Hiya');
@@ -27,17 +26,20 @@ const form = document.querySelector('form#games-form');
 const formView = new FormView(form);
 formView.setupEventListeners();
 
+const infoViewContainer = document.querySelector('#game-parameters-container');
+const infoView = new InfoView();
+infoView.readInput();
+
 const resultViewContainer = document.querySelector('#result-view-container');
 const resultView = new ResultView();
 resultView.bindEvents();
 
-const infoViewContainer = document.querySelector('#game-parameters-contaier');
-const infoView = new InfoView();
+
 
     //updates number of cards based on user input
     // deck.updateNumberOfCards(#)
     //returns the highest number
-    deck.highestNumber
+    //deck.highestNumber
     //PubSub.publishes  cdskhvsdfigsdfkj
 
 
