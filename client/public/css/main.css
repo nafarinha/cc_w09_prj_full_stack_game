@@ -1,3 +1,19 @@
 .hidden{
   display: none;
 }
+
+#board-view-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 2px black;
+}
+
+p {
+  padding: 20px;
+  color: blue;
+}
