@@ -21,7 +21,7 @@ ResultView.prototype.render = function () {
   this.resultContainer = resultContainer;
 
   const resultText = document.createElement('h2');
-  resultText.textContent = "Your number is:"
+  resultText.textContent = "Your number is...";
   resultContainer.appendChild(resultText);
 
   const resultButton = this.showResultButton();
@@ -39,6 +39,7 @@ ResultView.prototype.showResultButton = function (result){
     result.id = 'result-id';
     result.textContent = this.result;
     this.resultContainer.appendChild(result);
+    button.classList.replace('result-button','hidden');
   });
     return button;
   };

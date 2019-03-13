@@ -112,7 +112,6 @@ h3 {
 h2 {
   font-size: 30px;
   font-family: sans-serif;
-  text-align: center;
 }
 
 div p{
@@ -120,4 +119,9 @@ div p{
   border: border: solid 2px black;
   border-radius: 22px;
   margin: 4px;
+}
+
+#result-view-container{
+  align-content: center;
+  text-align: center;
 }
