@@ -5,21 +5,12 @@ const ResultView = function () {
   this.resultContainer = null;
 };
 
-// Gives the result that the computer calculated, the final number
-//Dont show the answer right away - post an image or something that we Then
-//click and when its clicked we get the result.
-
-//
-// Subscribes
-// Channel Card:result-submitted
-// (Deck model publishes) fn getGuessedNumber
+// Gives the result that the computer calculated
 
 ResultView.prototype.bindEvents = function() {
   PubSub.subscribe('Deck:result-submitted', (evt) => {
     const result = evt.detail;
-    console.log(result);
     this.result = result;
-    //add render function here
     this.render();
   })
 }
