@@ -1,7 +1,8 @@
 const PubSub = require('../helpers/pub_sub.js');
 
-const ResultView = function (result) {
-  this.result = result
+const ResultView = function () {
+  this.result = null;
+  this.resultContainer = null;
 };
 
 // Gives the result that the computer calculated, the final number
@@ -17,13 +18,16 @@ ResultView.prototype.bindEvents = function() {
   PubSub.subscribe('Deck:result-submitted', (evt) => {
     const result = evt.detail;
     console.log(result);
+    this.result = result;
     //add render function here
     this.render();
   })
 }
 
 ResultView.prototype.render = function () {
-  const resultContainer = document.querySelector('div#result-view-container');
+  const resultContainer = document.querySelector('#result-view-container');
+
+  this.resultContainer = resultContainer;
 
   const resultText = document.createElement('h1');
   resultText.textContent = "Your number is:"
@@ -36,10 +40,12 @@ ResultView.prototype.render = function () {
 ResultView.prototype.showResultButton = function (result){
   const button = document.createElement('button');
   button.classList.add('result-button');
-  button.value = result;
+  button.textContent = "Show me"
 
   button.addEventListener('click', (evt) => {
-    const result = document.createElement('h2');
+    const result = document.createElement('h2')
+    result.textContent = this.result;
+    this.resultContainer.appendChild(result);
   });
     return button;
   };

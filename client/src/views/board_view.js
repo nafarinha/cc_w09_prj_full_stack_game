@@ -9,7 +9,7 @@ const BoardView = function (container) {
 BoardView.prototype.bindEvents = function(){
   PubSub.subscribe('Deck:card-data-Ready',(evt)=>{
     this.cards = evt.detail;
-    this.renderCardView(evt.detail);
+    this.renderCardView(this.cards);
   });
 };
 //get info from model (pubsub) subscribe and call renderCardView with the cards -- update this.cards with cards.
@@ -17,13 +17,13 @@ BoardView.prototype.bindEvents = function(){
 BoardView.prototype.renderCardView = function(cards){
   console.log(this.cards);
   cards.forEach((card)=>{
-    card.prettyCard();
     const cardView = new CardView(card);
     const cardDetail = cardView.createCardView();
     this.container.appendChild(cardDetail)
     this.addButtons(card);
 
   });
+  console.log(this.cards);
 };
 
 BoardView.prototype.addButtons = function(card){
@@ -31,6 +31,10 @@ BoardView.prototype.addButtons = function(card){
   yesButton.textContent = 'Yes';
   yesButton.addEventListener('click',(evt)=>{
     card.containsNumber = true;
+    console.log(this.cards.length, card.iteration +1)
+    if (this.cards.length === (card.iteration +1)) {
+      this.publishAnswers();
+    }
     console.log(card);
   });
   this.container.appendChild(yesButton);
@@ -39,10 +43,18 @@ BoardView.prototype.addButtons = function(card){
   noButton.textContent = 'No';
   noButton.addEventListener('click',(evt)=>{
     console.log('no');
+    console.log(this.cards.length, card.iteration +1)
+
+    if (this.cards.length === (card.iteration +1)) {
+      this.publishAnswers();
+    }
   });
   this.container.appendChild(noButton);
-
 };
+
+BoardView.prototype.publishAnswers = function() {
+  PubSub.publish('BoardView:answer-ready', this.cards);
+}
 
 // Takes the answer from player 'yes' or 'no' and publishes to the model
 //Needs two BUTTONS

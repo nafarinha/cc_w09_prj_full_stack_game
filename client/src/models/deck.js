@@ -14,6 +14,11 @@ Deck.prototype.bindEvents = function(){
     this.updateNumberOfCards(evt.detail);
     this.generateCards();
   });
+  PubSub.subscribe('BoardView:answer-ready', (evt) => {
+    this.cards = evt.detail;
+    const guessedNumber = this.calculateGuessedNumber();
+    PubSub.publish('Deck:result-submitted', guessedNumber);
+  })
 };
 
 
@@ -87,7 +92,6 @@ Deck.prototype.calculateGuessedNumber = function () {
       guessedNumber += this.cards[i].cardNumbers[0]
     }
   }
-  PubSub.publish('Deck:result-submitted', guessedNumber);
   return guessedNumber;
 };
 
