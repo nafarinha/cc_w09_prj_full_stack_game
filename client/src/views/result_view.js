@@ -13,17 +13,43 @@ const ResultView = function (result) {
 // Channel Card:result-submitted
 // (Deck model publishes) fn getGuessedNumber
 
+ResultView.prototype.bindEvents = function() {
+  PubSub.subscribe('Card:result-submitted', (evt) => {
+    const result = evt.detail;
+    console.log(result);
+    //add render function here
+    this.render();
+  })
+}
 
-// ResultView.prototype.bindEvents = function () {
-//   PubSub.subscribe('Card:result-submitted', (event) => {
-//     const result = event.detail;
-//     // some prototype function here
-//     //this.xxxx(result);
-//   });
-// };
+ResultView.prototype.render = function () {
+  const resultContainer = document.querySelector('div#result-view-container');
 
-// ResultView.prototype.xxxx = function (result) {
-//
+  const resultText = document.createElement('h1');
+  resultText.textContent = "Your number is:"
+  resultContainer.appendChild(resultText);
+
+  const resultButton = this.showResultButton();
+  resultContainer.appendChild(resultButton);
+};
+
+ResultView.prototype.showResultButton = function (result)
+
+  const button = document.createElement('button');
+  button.classList.add('result-button');
+  button.value = result;
+
+  button.addEventListener('click', (evt) => {
+    const result = document.createElement('h2');
+  });
+    return button;
+  };
+
+
+//in model add
+// Deck.prototype.bindEvents = function() {
+//   const result = this.calculateGuessedNumber();
+//   PubSub.publish('Card:result-submitted', result);
 // }
 
 
