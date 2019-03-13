@@ -1,4 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js');
+const CardView = require('./card_view.js');
 
 const BoardView = function (container) {
   this.container = container;
@@ -6,13 +7,13 @@ const BoardView = function (container) {
 
 
 BoardView.prototype.renderCardView = function(cards){
-  cards.forEach(card)=>{
+  cards.forEach((card)=>{
     card.prettyCard();
     const cardView = new CardView(card);
     const cardDetail = cardView.createCardView();
     this.container.appendChild(cardDetail)
     this.addButtons();
-  };
+  });
 };
 
 BoardView.prototype.addButtons = function(){
@@ -48,7 +49,6 @@ BoardView.prototype.addButtons = function(){
 
 //CardView.prototype.answerYes = function() {
 
-}
 
 //if player presses No then nothing happens
 

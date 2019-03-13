@@ -1,5 +1,5 @@
 // const CardView = require('./views/card_view.js');
-// const BoardView = require('./views/board_view.js');
+const BoardView = require('./views/board_view.js');
 const FormView = require('./views/form_view.js');
 //const InfoView = require('./views/info_view.js');
 const ResultView = require('./views/result_view.js');
@@ -27,9 +27,11 @@ formView.setupEventListeners();
 const resultViewContainer = document.querySelector('#result-view-container');
 const resultView = new ResultView();
 
+const boardViewContainer = document.querySelector();
 
-    // const deck = new Deck;
-    // //on addEventListener -- user wants highest number
+
+// 
+// on addEventListener -- user wants highest number
     //
     // deck.updateHighestNumber(userInput);
     // deck.generateCards();
@@ -38,6 +40,14 @@ const resultView = new ResultView();
     //
     // deck.updateNumberOfCards(userInput);
     // deck.generateCards();
+
+
+
+
+const boardView = new BoardView(boardViewContainer);
+boardView.renderCardView(deck);
+
+
 
 
 
