@@ -1,7 +1,17 @@
 const PubSub = require('../helpers/pub_sub.js');
 
-const BoardView = function () {
-  this. = ;
+const BoardView = function (container) {
+  this.container = container;
+};
+
+
+BoardView.prototype.renderCardView = function(cards){
+  cards.forEach(card)=>{
+    card.prettyCard();
+    const cardView = new CardView(card);
+    const cardDetail = cardView.createCardView();
+    this.container.appendChild(cardDetail)
+  };
 };
 
 
