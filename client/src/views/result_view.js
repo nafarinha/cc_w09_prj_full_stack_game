@@ -44,6 +44,7 @@ ResultView.prototype.showResultButton = function (result){
 
   button.addEventListener('click', (evt) => {
     const result = document.createElement('h2')
+    result.id = 'result-id';
     result.textContent = this.result;
     this.resultContainer.appendChild(result);
   });
