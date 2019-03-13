@@ -9,6 +9,7 @@ const Deck = function () {
 
 };
 
+
 //resposible for getting the highestNumber OR number of cards.
 //**number will come from app.js
 Deck.prototype.updateHighestNumber =function (number){
@@ -79,6 +80,7 @@ Deck.prototype.calculateGuessedNumber = function () {
       guessedNumber += this.cards[i].cardNumbers[0]
     }
   }
+  PubSub.publish('Deck:result-submitted', guessedNumber);
   return guessedNumber;
 };
 
