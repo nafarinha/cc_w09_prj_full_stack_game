@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded',()=>{
 //at the start of the game you get a input from user, you get a number.
 //you pass this number here.
 
+const deck = new Deck();
+deck.bindEvents();
+
 const form = document.querySelector('form#games-form');
 const formView = new FormView(form);
 formView.setupEventListeners();
@@ -29,6 +32,7 @@ infoView.readInput();
 
 const resultViewContainer = document.querySelector('#result-view-container');
 const resultView = new ResultView();
+resultView.bindEvents();
 
 
 

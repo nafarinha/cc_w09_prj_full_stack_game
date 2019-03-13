@@ -24,6 +24,13 @@ FormView.prototype.setupEventListeners = function(){
     inputBox1.classList.replace('hidden','show');
     console.log(inputBox1);
   });
+  const playButton = document.querySelector('#games-form');
+  console.log(playButton);
+  playButton.addEventListener('submit',(evt)=>{
+    evt.preventDefault();
+    console.log(evt.target.cardsNumber.value);
+    PubSub.publish('FormView:sumbit',evt.target.cardsNumber.value);
+  });
 };
 
 
