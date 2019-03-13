@@ -14,7 +14,7 @@ const ResultView = function (result) {
 // (Deck model publishes) fn getGuessedNumber
 
 ResultView.prototype.bindEvents = function() {
-  PubSub.subscribe('Card:result-submitted', (evt) => {
+  PubSub.subscribe('Deck:result-submitted', (evt) => {
     const result = evt.detail;
     console.log(result);
     //add render function here
@@ -34,7 +34,6 @@ ResultView.prototype.render = function () {
 };
 
 ResultView.prototype.showResultButton = function (result)
-
   const button = document.createElement('button');
   button.classList.add('result-button');
   button.value = result;
@@ -49,7 +48,7 @@ ResultView.prototype.showResultButton = function (result)
 //in model add
 // Deck.prototype.bindEvents = function() {
 //   const result = this.calculateGuessedNumber();
-//   PubSub.publish('Card:result-submitted', result);
+//   PubSub.publish('Deck:result-submitted', result);
 // }
 
 
