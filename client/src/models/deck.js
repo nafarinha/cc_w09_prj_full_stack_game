@@ -60,6 +60,7 @@ Deck.prototype.generateCards = function(){
     card.createCard();
     this.cards.push(card);
   };
+  PubSub.publish('Deck:card-data-Ready',this.cards);
 
 };
 

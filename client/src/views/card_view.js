@@ -5,7 +5,7 @@ const CardView = function (prettyCard) {
   this.prettyCard = prettyCard;
 };
 
-CardView.prototype.createDiv = function(){
+CardView.prototype.createCardView = function(){
   const div = document.createElement('div');
   div.classList.add('card-container');
 
