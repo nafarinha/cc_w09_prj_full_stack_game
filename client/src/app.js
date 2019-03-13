@@ -1,4 +1,4 @@
-// const CardView = require('./views/card_view.js');
+const Deck = require('./models/deck.js')
 const BoardView = require('./views/board_view.js');
 const FormView = require('./views/form_view.js');
 const InfoView = require('./views/info_view.js');
