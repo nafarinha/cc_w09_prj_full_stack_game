@@ -6,7 +6,12 @@ const BoardView = function (container) {
   this.cards = null;
 };
 
-///bindEvents
+BoardView.prototype.bindEvents = function(){
+  PubSub.subscribe('Deck:card-data-Ready',(evt)=>{
+    console.log(evt.detail);
+    this.cards = this.renderCardView(evt.detail);
+  });
+};
 //get info from model (pubsub) subscribe and call renderCardView with the cards -- update this.cards with cards.
 
 BoardView.prototype.renderCardView = function(cards){
@@ -22,14 +27,18 @@ BoardView.prototype.renderCardView = function(cards){
 BoardView.prototype.addButtons = function(){
   const yesButton = document.createElement('button');
   yesButton.textContent = 'Yes';
+  yesButton.addEventListener('click',(evt)=>{
+    //run render again
+  });
   this.container.appendChild(yesButton);
-
-  //addEventListener (click)
 
   const noButton = document.createElement('button');
   noButton.textContent = 'No';
+  noButton.addEventListener('click',(evt)=>{
+    //run render again
+  });
   this.container.appendChild(noButton);
-  //addEventListener
+
 };
 
 // Takes the answer from player 'yes' or 'no' and publishes to the model
