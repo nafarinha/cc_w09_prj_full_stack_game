@@ -18,12 +18,12 @@ FormView.prototype.setupEventListeners = function(){
     })
   });
 
-  const numbersButton = document.querySelector('#max-number-btn');
-  numbersButton.addEventListener('click',function(evt){
-    inputBox1 = document.querySelector('#highest-number-container');
-    inputBox1.classList.replace('hidden','show');
-    console.log(inputBox1);
-  });
+  // const numbersButton = document.querySelector('#max-number-btn');
+  // numbersButton.addEventListener('click',function(evt){
+  //   inputBox1 = document.querySelector('#highest-number-container');
+  //   inputBox1.classList.replace('hidden','show');
+  //   console.log(inputBox1);
+  // });
   const playButton = document.querySelector('#games-form');
   console.log(playButton);
   playButton.addEventListener('submit',(evt)=>{
