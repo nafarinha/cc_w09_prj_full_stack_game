@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
-    <h1>Number Guesser</h1>
-
+    <h1>Magic Of Numbers</h1>
+    <h3>HOW TO PLAY:</h3>
+    <p id="game-instructions">Choose a number of cards to play with and you will be given a range of number to choose from. The computer will then try to guess which number you chose</p>
     <form id="games-form">
       <button type="button" id="number-of-cards-btn">Play with Cards</button>
       <!-- <button type="button" id="max-number-btn">Play using Numbers</button> -->
@@ -21,6 +22,8 @@
         <label for="highestNumber">Choose the highest number to guess:</label>
         <input type="number" id="highestNumber"/>
       </div> -->
+      <h4 id="game-parameter-result"></h4>
+
       <div id="game-parameters-container"></div>
 
       <input type="submit" id="play-game" value="Play" class="button">
@@ -29,8 +32,6 @@
       <div id ="board-view-container"></div>
     </div>
     <section id ="result-view-container"></section>
-    <h3>How to Play:</h3>
-    <p>Instructions go here...</p>
-    <p id="game-parameter-result"></p>
+
   </body>
 </html>
