@@ -22,8 +22,8 @@ FormView.prototype.setupEventListeners = function(){
   console.log(playButton);
   playButton.addEventListener('submit',(evt)=>{
     evt.preventDefault();
-    console.log(evt.target);
-    PubSub.publish('FormView:sumbit',evt.target);
+    console.log(evt.target.cardsNumber.value);
+    PubSub.publish('FormView:sumbit',evt.target.cardsNumber.value);
   });
 };
 

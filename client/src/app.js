@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 //you pass this number here.
 
 const deck = new Deck();
+deck.bindEvents();
 
 const form = document.querySelector('form#games-form');
 const formView = new FormView(form);

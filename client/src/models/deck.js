@@ -9,6 +9,12 @@ const Deck = function () {
 
 };
 
+Deck.prototype.bindEvents = function(){
+  PubSub.subscribe('FormView:sumbit',(evt)=>{
+    console.log(evt.detail);
+  });
+};
+
 
 //resposible for getting the highestNumber OR number of cards.
 //**number will come from app.js
