@@ -32,6 +32,8 @@ const resultView = new ResultView();
 const infoViewContainer = document.querySelector('#game-parameters-contaier');
 const infoView = new InfoView();
 
+const boardView = new BoardView(container);
+boardView.bindEvents();
 
     //updates number of cards based on user input
     // deck.updateNumberOfCards(#)

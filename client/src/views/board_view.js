@@ -3,8 +3,11 @@ const CardView = require('./card_view.js');
 
 const BoardView = function (container) {
   this.container = container;
+  this.cards = null;
 };
 
+///bindEvents
+//get info from model (pubsub) subscribe and call renderCardView with the cards -- update this.cards with cards.
 
 BoardView.prototype.renderCardView = function(cards){
   cards.forEach((card)=>{
@@ -21,9 +24,12 @@ BoardView.prototype.addButtons = function(){
   yesButton.textContent = 'Yes';
   this.container.appendChild(yesButton);
 
+  //addEventListener (click)
+
   const noButton = document.createElement('button');
   noButton.textContent = 'No';
   this.container.appendChild(noButton);
+  //addEventListener
 };
 
 // Takes the answer from player 'yes' or 'no' and publishes to the model
