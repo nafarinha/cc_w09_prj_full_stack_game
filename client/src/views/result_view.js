@@ -29,7 +29,7 @@ ResultView.prototype.render = function () {
 
   this.resultContainer = resultContainer;
 
-  const resultText = document.createElement('h1');
+  const resultText = document.createElement('h2');
   resultText.textContent = "Your number is:"
   resultContainer.appendChild(resultText);
 

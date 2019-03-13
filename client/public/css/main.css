@@ -5,15 +5,68 @@
 #board-view-container{
   display: flex;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
 .card-container{
   display: flex;
   flex-wrap: wrap;
   border: solid 2px black;
+  border-radius: 6px
 }
 
 p {
-  padding: 20px;
-  color: blue;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+.yes-btn{
+  font-size: 16px;
+  background-color:#33FF5B;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 6px;
+  align-items: stretch;
+}
+
+.no-btn{
+  font-size: 16px;
+  background-color:#FF3352;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 6px;
+}
+
+.result-button{
+  background-color:#e7e7e7; color: black;
+  font-size: 24px;
+}
+
+input[type=submit]{
+  font-size:56px;
+  color:black;
+  padding:20px;
+  font-weight: bold;
+}
+
+
+#number-of-cards-btn {
+  font-size:20px;
+  color:black;
+}
+
+#cards-number-container{
+  font-size: 20px;
+  padding: 15px;
+}
+
+#cardsNumber{
+  width: 50px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+h1 {
+  text-align: center;
 }

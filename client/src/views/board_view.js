@@ -28,6 +28,7 @@ BoardView.prototype.addButtons = function(card){
   buttonContainer.classList.add('btn-container');
 
   const yesButton = document.createElement('button');
+  yesButton.classList.add('yes-btn')
   yesButton.textContent = 'Yes';
   yesButton.addEventListener('click',(evt)=>{
     card.containsNumber = true;
@@ -39,6 +40,7 @@ BoardView.prototype.addButtons = function(card){
   buttonContainer.appendChild(yesButton);
 
   const noButton = document.createElement('button');
+  noButton.classList.add('no-btn')
   noButton.textContent = 'No';
   noButton.addEventListener('click',(evt)=>{
 
