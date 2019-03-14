@@ -127,6 +127,7 @@ h1 {
 
 h4 {
   font-size: 30px;
+  margin: 10px;
 }
 
 h3 {
@@ -166,4 +167,12 @@ div p{
 
 #hidden{
   display: none;
+}
+
+#play-game{
+  font-size:24px;
+  color:black;
+  margin-top: 40px;
+  background-color: #A0C1B8;
+  border-radius: 4px;
 }
