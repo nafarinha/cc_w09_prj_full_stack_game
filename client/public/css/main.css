@@ -121,7 +121,8 @@ div p{
   margin: 4px;
 }
 
-#result-view-container{
+#result-view-container, h2{
   align-content: center;
   text-align: center;
+  font-size: 70px;
 }
