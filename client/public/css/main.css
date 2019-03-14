@@ -176,3 +176,11 @@ div p{
   background-color: #A0C1B8;
   border-radius: 4px;
 }
+
+#play-again{
+  font-size:24px;
+  color:black;
+  margin-top: 40px;
+  background-color: #A0C1B8;
+  border-radius: 4px;
+}
