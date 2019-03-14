@@ -33,7 +33,7 @@ BoardView.prototype.addButtons = function(card){
   yesButton.addEventListener('click',(evt)=>{
     card.containsNumber = true;
     if (this.cards.length === (card.iteration +1)) {
-      this.container.innerHTML='';
+      this.container.id = 'hidden';
       this.publishAnswers();
     };
   });
@@ -45,7 +45,7 @@ BoardView.prototype.addButtons = function(card){
   noButton.addEventListener('click',(evt)=>{
 
     if (this.cards.length === (card.iteration +1)) {
-      this.container.innerHTML = '';
+      this.container.id = 'hidden';
       this.publishAnswers();
     }
   });

@@ -4,6 +4,7 @@ body {
 
 .hidden{
   display: none;
+  padding: 0px;
 }
 
 #board-view-container{
@@ -125,4 +126,8 @@ div p{
   align-content: center;
   text-align: center;
   font-size: 70px;
+}
+
+#hidden{
+  display: none;
 }
