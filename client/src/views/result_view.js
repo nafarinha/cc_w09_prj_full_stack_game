@@ -38,8 +38,16 @@ ResultView.prototype.showResultButton = function (result){
     const result = document.createElement('h2')
     result.id = 'result-id';
     result.textContent = this.result;
+    const playAgain = document.createElement('button');
+    playAgain.textContent = 'Play Again';
     this.resultContainer.appendChild(result);
+    this.resultContainer.appendChild(playAgain);
     button.classList.replace('result-button','hidden');
+
+    playAgain.addEventListener('click',()=>{
+      location.reload(true);
+    });
+
   });
     return button;
   };
