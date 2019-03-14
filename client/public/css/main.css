@@ -1,5 +1,7 @@
 body {
-  background-color: #F2F3F4;
+  /* background-color: #F2F3F4; */
+  /* background-color: #709FB0; */
+  background-image: url("jj-ying-236821-unsplash.jpg");
 }
 
 .hidden{
@@ -19,8 +21,10 @@ body {
   flex-wrap: wrap;
   border: solid 2px black;
   border-radius: 30px 30px;
-  background-color: #2980B9;
+  /* background-color: #2980B9; */
+  /* background-color: #726A95; */
   padding: 10px;
+  box-shadow: #283747 2px 2px;
 }
 
 p {
@@ -29,14 +33,6 @@ p {
   font-weight: bold;
 }
 
-.yes-btn{
-  font-size: 16px;
-  background-color:#48C9B0;
-  font-weight: bold;
-  padding: 12px 28px;
-  border-radius: 6px;
-  align-self: center;
-}
 
 .btn-container{
   width: 100%;
@@ -44,6 +40,19 @@ p {
   padding: 10px;
   margin-bottom: 20px;
   align-items: center;
+}
+
+.yes-btn{
+  font-size: 16px;
+  background-color:#52BE80;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 6px;
+  align-self: center;
+}
+
+.yes-btn:hover{
+  background-color: #27AE60;
 }
 
 .no-btn{
@@ -55,9 +64,21 @@ p {
   align-self: center;
 }
 
+.no-btn:hover{
+  background-color: #E74C3C;
+}
+
+
+
+
+
 .result-button{
-  background-color:#e7e7e7; color: black;
+  background-color:#A0C1B8; color: black;
   font-size: 24px;
+}
+
+.result-button:hover{
+  background-color:#73C6B6;
 }
 
 input[type=submit]{
@@ -69,9 +90,15 @@ input[type=submit]{
 
 
 #number-of-cards-btn {
-  font-size:20px;
+  font-size:24px;
   color:black;
-  background-color:
+  margin-top: 40px;
+  background-color: #A0C1B8;
+  border-radius: 4px;
+}
+
+#number-of-cards-btn:hover{
+  background-color:#73C6B6;
 }
 
 #cards-number-container{
@@ -83,12 +110,15 @@ input[type=submit]{
   width: 50px;
   height: 20px;
   border-radius: 4px;
+  font-size: 14px;
 }
 
 h1 {
   text-align: center;
   text-shadow: 1px 1px grey;
+  font-family: arial;
 }
+
 
 .input.button{
   font-size:20px;
@@ -105,9 +135,12 @@ h3 {
 
 #game-instructions{
   font-family: sans-serif;
-  border: solid 2px black;
+  border: solid 1px black;
   border-radius: 6px;
-  background-color: #85C1E9  ;
+  padding:15px;
+  /* background-color: #85C1E9  ; */
+  /* background-color: #A0C1B8; */
+  font-size: 20px;
 }
 
 h2 {
@@ -116,10 +149,12 @@ h2 {
 }
 
 div p{
-  background-color: #F2F3F4;
+  background-color: #A0C1B8;
+  /* background-color: #F2F3F4; */
   border: border: solid 2px black;
   border-radius: 22px;
   margin: 4px;
+  /* background-color:#D7DBDD  ; */
 }
 
 #result-view-container, h2{
