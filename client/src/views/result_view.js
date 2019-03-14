@@ -40,13 +40,16 @@ ResultView.prototype.showResultButton = function (result){
     result.textContent = this.result;
     const playAgain = document.createElement('button');
     playAgain.textContent = 'Play Again';
+    playAgain.id = 'play-again';
+    
     this.resultContainer.appendChild(result);
     this.resultContainer.appendChild(playAgain);
     button.classList.replace('result-button','hidden');
+
     const hiddenSong = document.createElement('audio');
     hiddenSong.src = '/css/harry_potter_theme.mp3'
     hiddenSong.autoplay="true";
-    hiddenSong.trype = 'audio/mpeg';
+    hiddenSong.type = 'audio/mpeg';
     hiddenSong.hidden="true";
     this.resultContainer.appendChild(hiddenSong);
 
